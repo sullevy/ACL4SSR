@@ -1,0 +1,13 @@
+payload:
+  - PROCESS-NAME,mailmaster
+  - PROCESS-NAME,outlook
+  - PROCESS-NAME,wps
+  - PROCESS-NAME,wpscloudsvr
+  - PROCESS-NAME,WeChat
+  - PROCESS-NAME,WeChatAppEx
+  - PROCESS-NAME,WeChatPlayer
+  - PROCESS-NAME,WeChatOCR
+  - PROCESS-NAME,WeChatUtility
+  - PROCESS-NAME,LogService
+  - PROCESS-NAME,QAXEntClient
+  - PROCESS-NAME,QAXSafe

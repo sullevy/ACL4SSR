@@ -1,13 +1,13 @@
-payload:
-  - PROCESS-NAME,mailmaster.exe
-  - PROCESS-NAME,outlook.exe
-  - PROCESS-NAME,wps.exe
-  - PROCESS-NAME,wpscloudsvr.exe
-  - PROCESS-NAME,WeChat.exe
-  - PROCESS-NAME,WeChatAppEx.exe
-  - PROCESS-NAME,WeChatPlayer.exe
-  - PROCESS-NAME,WeChatOCR.exe
-  - PROCESS-NAME,WeChatUtility.exe
-  - PROCESS-NAME,LogService.exe
-  - PROCESS-NAME,QAXEntClient.exe
-  - PROCESS-NAME,QAXSafe.exe
+#works
+PROCESS-NAME,mailmaster.exe
+PROCESS-NAME,outlook.exe
+PROCESS-NAME,wps.exe
+PROCESS-NAME,wpscloudsvr.exe
+PROCESS-NAME,WeChat.exe
+PROCESS-NAME,WeChatAppEx.exe
+PROCESS-NAME,WeChatPlayer.exe
+PROCESS-NAME,WeChatOCR.exe
+PROCESS-NAME,WeChatUtility.exe
+PROCESS-NAME,LogService.exe
+PROCESS-NAME,QAXEntClient.exe
+PROCESS-NAME,QAXSafe.exe

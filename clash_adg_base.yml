@@ -1,0 +1,54 @@
+port: {{ default(global.clash.http_port, "7890") }}
+socks-port: {{ default(global.clash.socks_port, "7891") }}
+allow-lan: {{ default(global.clash.allow_lan, "true") }}
+mode: rule
+log-level: {{ default(global.clash.log_level, "info") }}
+external-controller: :9090
+
+{% if default(request.adg, "true") == "true" or exists("request.adg.port") %}
+dns:
+  enable: true
+  ipv6: true
+  listen: 127.0.0.1:{{ default(request.adg.port, "5450") }}
+  enhanced-mode: fake-ip
+  default-nameserver:
+    - 223.5.5.5
+    - 223.6.6.6
+    - 119.29.29.29
+    - 119.28.28.28
+    - 1.0.0.1
+    - 208.67.222.222
+    - 1.2.4.8
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - tls://dns.adguard.com:853
+  fallback: []
+  fake-ip-filter: #让微软系和一些stun走直连
+    # === Local ===
+    - "*.lan"
+    - "*.local"
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - localhost.ptlogin2.qq.com
+    - "*.n.n.srv.nintendo.net"
+    - +.stun.playstation.net
+    # === Microsoft Windows Serivice ===
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+    - WORKGROUP
+{% endif %}
+
+{% if local.clash.new_field_name == "true" %}
+proxies: ~
+proxy-groups: ~
+rules: ~
+{% else %}
+Proxy: ~
+Proxy Group: ~
+Rule: ~
+{% endif %}

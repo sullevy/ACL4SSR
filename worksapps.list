@@ -1,4 +1,5 @@
 #works
+PROCESS-NAME,mstsc.exe
 PROCESS-NAME,mailmaster.exe
 PROCESS-NAME,outlook.exe
 PROCESS-NAME,wps.exe
